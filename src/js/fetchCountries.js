@@ -8,7 +8,7 @@ export function fetchCountries(name, list) {
        return response.json();
     })
     .then(country => {
-        console.log(country);
+        //console.log(country);
         if (country.length > 10) {
             Notiflix.Notify.info("Too many matches found. Please enter a more specific name.");
         } else if (country.length >= 2) {
@@ -29,6 +29,6 @@ export function fetchCountries(name, list) {
     })
     .catch(error => {
         Notiflix.Notify.failure("Oops, there is no country with that name");
-        console.log(error);
+       // console.log(error);
     });
 }
